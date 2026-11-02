@@ -1,4 +1,7 @@
-<img width="1024" height="1024" alt="image-Photoroom (2)" src="https://github.com/user-attachments/assets/4b82a1b9-92a7-46bb-91e7-942a42f07ab9" />
+<p align="center">
+  <img width="1024" height="1024" alt="replace-the-laptop-and-the-small-arrow-above-it-in" src="https://github.com/user-attachments/assets/a8e74c06-6fe4-44d1-ae66-1643caa707d2" width="100" alt="Логотип" />
+</p>
+
 
 # Бот студенческого совета СГН
 
