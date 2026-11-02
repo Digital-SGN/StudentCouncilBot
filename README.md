@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="replace-the-laptop-and-the-small-arrow-above-it-in" src="https://github.com/user-attachments/assets/a8e74c06-6fe4-44d1-ae66-1643caa707d2" width="100" alt="Логотип" />
+  <img alt="replace-the-laptop-and-the-small-arrow-above-it-in" src="https://github.com/user-attachments/assets/a8e74c06-6fe4-44d1-ae66-1643caa707d2" width="160" alt="Логотип" />
 </p>
 
 
