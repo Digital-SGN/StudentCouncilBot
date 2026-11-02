@@ -57,7 +57,7 @@ APScheduler сам генерирует таблицу apscheduler_jobs
 * `SELECT, INSERT, UPDATE, DELETE` — `"Guests"`, `"Registrations"`
 * `SELECT` — `"Events"`
 
-Подключение к серверу выполняется через пользователя `dev_bot`.
+Подключение к серверу выполняется через SSH-туннель, пользователь `dev_bot`.
 
 В отдельном терминале запустить:
 ```bash
