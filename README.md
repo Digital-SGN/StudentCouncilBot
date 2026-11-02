@@ -1,4 +1,4 @@
-<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/a8782da8-c184-4d37-9046-6beb77e89cba" />
+<img width="1024" height="1024" alt="image-Photoroom (2)" src="https://github.com/user-attachments/assets/4b82a1b9-92a7-46bb-91e7-942a42f07ab9" />
 
 # Бот студенческого совета СГН
 
