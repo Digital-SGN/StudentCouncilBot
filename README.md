@@ -19,7 +19,6 @@
 - <img src="https://cdn.simpleicons.org/clockify/0CBFA1" width="16" /> **Напоминания:** автоматические уведомления за 24 и за 2 часа до события.
 - <img src="https://cdn.simpleicons.org/openbadges/0CBFA1" width="16" /> **Админ-панель:** команды для просмотра списков и отметки пришедших.
 
----
 
 ## Стек технологий
 
@@ -32,7 +31,6 @@
 - <img src="https://cdn.simpleicons.org/docker/0CBFA1" width="16" /> Docker + Docker Compose
 - <img src="https://cdn.simpleicons.org/wireguard/0CBFA1" width="16" /> SSH-туннель (для связи с БД)
 
----
 
 ## Архитектура
 
@@ -65,7 +63,6 @@ flowchart LR
     class SQLite sqlite;
 ```
 
----
 
 ## Схема данных (PostgreSQL)
 
@@ -93,7 +90,6 @@ attended_at — TIMESTAMPTZ
 UNIQUE (guest_id, event_id)
 ```
 
----
 
 ## Подключение к БД
 
@@ -168,7 +164,6 @@ bot/
 └── .env                  — токен, ADMINS, DATABASE_URL
 ```
 
----
 
 ## Функционал MVP
 
@@ -183,7 +178,6 @@ bot/
 - `/list <event_id>` — кто записался
 - `/attended <guest_id> <event_id>` — отметить пришедшего
 
----
 
 ## Напоминания
 
@@ -194,7 +188,6 @@ bot/
 - `misfire_grace_time=3600` — если бот лежал, догонит в течение часа.
 - Перед отправкой — проверка, что регистрация активна.
 
----
 
 ## Что критично с самого начала
 
