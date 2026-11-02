@@ -1,4 +1,4 @@
-# <img src="https://cdn.simpleicons.org/telegram/0CBFA1" width="32" align="middle" /> Бот для гостей мероприятий
+# <img src="https://cdn.simpleicons.org/telegram/0CBFA1" width="32" align="middle" /> Бот для мероприятий
 
 ## <img src="https://cdn.simpleicons.org/googlemessages/0CBFA1" width="24" align="middle" /> Что делаем
 
