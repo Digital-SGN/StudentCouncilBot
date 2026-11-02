@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="replace-the-laptop-and-the-small-arrow-above-it-in" src="https://github.com/user-attachments/assets/a8e74c06-6fe4-44d1-ae66-1643caa707d2" width="140" alt="Логотип" />
+  <img src="https://github.com/Digital-SGN/Handbook/blob/main/assets/logo_%20council_bot.png" width="140" alt="Логотип" />
 </p>
 
 <h1 align="center"> Бот студенческого совета СГН </h1>
