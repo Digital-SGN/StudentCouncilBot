@@ -48,24 +48,40 @@ APScheduler сам генерирует таблицу apscheduler_jobs
 
 Файл `data/scheduler.db` и volume-том в docker, чтобы не терялось при деплоях, бэкап раз в сутки (опционально).
 
-## Права в Postgres
 
-Создаём отдельную роль `bot_user`. Даём:
-```sql
-CONNECT на базу studsovet
-USAGE на схему public
-SELECT, INSERT, UPDATE, DELETE на guests и registrations
-USAGE, SELECT на последовательности guests_id_seq и registrations_id_seq
-SELECT на events — обязателен для FK-проверки и списка меро
+## Подключение к БД
+
+Пользователь БД: `bot_user`.
+
+Доступные таблицы:
+* `SELECT, INSERT, UPDATE, DELETE` — `"Guests"`, `"Registrations"`
+* `SELECT` — `"Events"`
+
+Подключение к серверу выполняется через пользователя `dev_bot`.
+
+В отдельном терминале запустить:
+```bash
+ssh -L 5433:localhost:5432 dev_bot@153.80.246.36
 ```
 
-На остальные таблицы (AspNetUsers, Badges) прав не даём.
+### Настройки DBeaver
+* **Host:** `localhost`
+* **Port:** `5433`
+* **Database:** `studsovet`
+* **Username:** `bot_user`
+* **Password:** пароль от `bot_user`
 
-## Подключение
+### Переменные окружения (`.env`)
 
-- Сеть: VPN (WireGuard / Tailscale) или SSH-туннель
-- Postgres наружу не открывать
-- DATABASE_URL: `postgresql+asyncpg://bot_user:...@<vpn_ip>:5432/studsovet`
+**Локально:**
+```env
+DATABASE_URL=postgresql+asyncpg://bot_user:ПАРОЛЬ@localhost:5433/studsovet
+```
+
+**Продакшен (Docker):**
+```env
+DATABASE_URL=postgresql+asyncpg://bot_user:ПАРОЛЬ@studentcouncil_db:5432/studsovet
+```
 
 ## Примерная структура бота - почитайте [курс по Aiogram](https://github.com/Digital-SGN/Handbook/tree/main/docs/Aiogram)
 ```text
