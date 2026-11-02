@@ -78,7 +78,7 @@ ssh -L 5433:localhost:5432 dev_bot@153.80.246.36
 DATABASE_URL=postgresql+asyncpg://bot_user:ПАРОЛЬ@localhost:5433/studsovet
 ```
 
-**Продакшен (Docker):**
+**Docker:**
 ```env
 DATABASE_URL=postgresql+asyncpg://bot_user:ПАРОЛЬ@studentcouncil_db:5432/studsovet
 ```
