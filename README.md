@@ -1,12 +1,14 @@
-## Что делаем
+# <img src="https://cdn.simpleicons.org/telegram/0CBFA1" width="32" align="middle" /> Бот для гостей мероприятий
+
+## <img src="https://cdn.simpleicons.org/googlemessages/0CBFA1" width="24" align="middle" /> Что делаем
 
 Бот для внешних гостей мероприятий студсовета. Один раз регистрируются, дальше — одна кнопка на каждое меро. Напоминания автоматически. Статистика доступна на основной платформе.
 
-## Зачем
+## <img src="https://cdn.simpleicons.org/target/0CBFA1" width="24" align="middle" /> Зачем
 
 Проводится много мероприятий в год, и на каждое — новая форма и ручная работа с таблицами. Бот нужен чтобы это автоматизировать и сэкономить кучу времени - и нам и потенциальным гостям на мероприятия.
 
-## Стек
+## <img src="https://cdn.simpleicons.org/python/0CBFA1" width="24" align="middle" /> Стек
 
 - Python + aiogram 3.x
 - PostgreSQL (общая с основным проектом)
@@ -15,7 +17,7 @@
 - Docker, отдельный compose
 - Отдельный VPS
 
-## Схема данных
+## <img src="https://cdn.simpleicons.org/postgresql/0CBFA1" width="24" align="middle" /> Схема данных
 
 ### Postgres — таблицы бота
 
@@ -48,8 +50,7 @@ APScheduler сам генерирует таблицу apscheduler_jobs
 
 Файл `data/scheduler.db` и volume-том в docker, чтобы не терялось при деплоях, бэкап раз в сутки (опционально).
 
-
-## Подключение к БД
+## <img src="https://cdn.simpleicons.org/wireguard/0CBFA1" width="24" align="middle" /> Подключение к БД
 
 Пользователь БД: `bot_user`.
 
@@ -83,7 +84,9 @@ DATABASE_URL=postgresql+asyncpg://bot_user:ПАРОЛЬ@localhost:5433/studsovet
 DATABASE_URL=postgresql+asyncpg://bot_user:ПАРОЛЬ@studentcouncil_db:5432/studsovet
 ```
 
-## Примерная структура бота - почитайте [курс по Aiogram](https://github.com/Digital-SGN/Handbook/tree/main/docs/Aiogram)
+## <img src="https://cdn.simpleicons.org/files/0CBFA1" width="24" align="middle" /> Примерная структура бота
+Почитайте [курс по Aiogram](https://github.com/Digital-SGN/Handbook/tree/main/docs/Aiogram)
+
 ```text
 bot/
 ├── handlers/
@@ -125,7 +128,7 @@ bot/
 └── .env                  — токен, ADMINS, DATABASE_URL
 ```
 
-## Функционал MVP
+## <img src="https://cdn.simpleicons.org/todoist/0CBFA1" width="24" align="middle" /> Функционал MVP
 
 **Гость:**
 
@@ -140,7 +143,7 @@ bot/
 - `/list <event_id>` — кто записался
 - `/attended <guest_id> <event_id>` — отметить пришедшего
 
-## Напоминания
+## <img src="https://cdn.simpleicons.org/clockify/0CBFA1" width="24" align="middle" /> Напоминания
 
 - При регистрации — 2 задачи в APScheduler: за 24ч и за 2ч
 - Задачи в SQLite на VPS бота (volume)
@@ -149,8 +152,8 @@ bot/
 - misfire_grace_time=3600 — если бот лежал, догонит в течение часа
 - Перед отправкой — проверить, что регистрация активна
 
+## <img src="https://cdn.simpleicons.org/starship/0CBFA1" width="24" align="middle" /> На будущее
 
-##  На будущее
 - QR-коды для отметки
 - Экспорт CSV
 - Mini App
@@ -159,12 +162,12 @@ bot/
 
 Взаимодействие с данными будет на платформе студсовета, например сейчас у мероприятий есть поля по явке (сколько зарегистрировалось и сколько пришло), но они заполняются вручную, этот бот поможет автоматизировать это и проводить хорошую аналитику по посещаемости, также сэкономит кучу времени в будущем.
 
-## Открытые вопросы
+## <img src="https://cdn.simpleicons.org/helpdesk/0CBFA1" width="24" align="middle" /> Открытые вопросы
 
 - VPN или SSH-туннель для связи VPS бота с Postgres
 - Текст согласия на ПД и страница /privacy
 
-## Что критично с самого начала
+## <img src="https://cdn.simpleicons.org/openbadges/0CBFA1" width="24" align="middle" /> Что критично с самого начала
 
 1. Отдельный пользователь БД с ограниченными правами
 2. UNIQUE (guest_id, event_id) — защита от двойного клика
