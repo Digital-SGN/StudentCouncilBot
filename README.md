@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/Digital-SGN/Handbook/blob/main/assets/logo_%20council_bot.png" width="140" alt="Логотип" />
+  <img src="https://github.com/Digital-SGN/Handbook/blob/main/assets/logo_%20council_bot.png" width="160" alt="Логотип" />
 </p>
 
 <h1 align="center"> Бот студенческого совета СГН </h1>
