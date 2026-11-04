@@ -146,10 +146,10 @@ CONSENT_VERSION=1.0
 
 ---
 
-## Структура проекта
+## Примерная структура проекта
 
 ```text
-bot/
+StudentCouncilBot/
 ├── handlers/
 │   ├── __init__.py
 │   ├── start.py          — /start, регистрация (FSM)
@@ -180,7 +180,7 @@ bot/
 ├── requirements.txt
 ├── Dockerfile
 ├── docker-compose.yml
-└── .env                  — токен, ADMINS, DATABASE_URL
+└── .env                  — секреты, ADMINS, DATABASE_URL
 ```
 
 
