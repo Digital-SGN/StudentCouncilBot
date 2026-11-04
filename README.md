@@ -120,10 +120,9 @@ ssh -L 5433:localhost:5432 dev_bot@153.80.246.36
 
 ### Переменные окружения (`.env`)
 
-**Локально:**
 ```env
 # Токен бота
-BOT_TOKEN=123456789:AAHdqTcvCH1vGWJxfSeofSAs0K5PALDsaw
+BOT_TOKEN=
 
 # База данных 
 # Локально (через SSH-туннель):
@@ -132,22 +131,17 @@ DATABASE_URL=postgresql+asyncpg://bot_user:ваш_пароль@localhost:5433/st
 # DATABASE_URL=postgresql+asyncpg://bot_user:ваш_пароль@studentcouncil_db:5432/studsovet
 
 # Интеграция с Платформой (API)
-API_BASE_URL=http://localhost:8080/api
+API_BASE_URL=
 
 # 4. Telegram ID админов через запятую (без пробелов), кому доступны команды /list и /attended
-ADMINS=123456789,987654321
+ADMINS=1234,12345...
 
-# 5. Настройки планировщика (Команда Scheduler)
+# 5. Настройки планировщика (Scheduler)
 # Часовой пояс для корректной отправки напоминаний (за 24ч и 2ч)
 TIMEZONE=Europe/Moscow
 
 # Версия согласия на обработку ПД, которую сейчас принимает бот
 CONSENT_VERSION=1.0
-```
-
-**Docker:**
-```env
-DATABASE_URL=postgresql+asyncpg://bot_user:ПАРОЛЬ@studentcouncil_db:5432/studsovet
 ```
 
 ---
